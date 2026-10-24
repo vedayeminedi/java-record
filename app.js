@@ -1,6 +1,6 @@
 const R=window.RECORD||{},$=s=>document.querySelector(s),app=$('#app');
-const T={1:'Comparative Table',2:'JDK Installation',3:'Java Basics',4:'No task assigned',5:'No task assigned',6:'Classes, Objects & Nested Classes',7:'Strings & Inheritance',8:'Inheritance & Polymorphism',9:'Packages & Interfaces',10:'Exception Handling & Byte Streams',11:'Character Streams & Threads'};
-const K=/(\/\/.*|"(?:\\.|[^"\\])*"|\b(?:public|class|static|void|int|double|float|long|char|byte|short|boolean|String|new|extends|implements|interface|package|import|if|else|for|while|return|final|try|catch|finally|throw|throws|super|this|true|false|null)\b|\b\d+(?:\.\d+)?[fFL]?\b)/g;
+const T={1:'Comparative Table',2:'JDK Installation',3:'Java Basics',4:'No task assigned',5:'No task assigned',6:'Classes, Objects & Nested Classes',7:'Strings & Inheritance',8:'Inheritance & Polymorphism',9:'Packages & Interfaces',10:'Exception Handling & Byte Streams',11:'Character Streams & Threads',12:'Multithreading & Lambda Expressions'};
+const K=/(\/\/.*|"(?:\\.|[^"\\])*"|\b(?:public|class|static|void|int|double|float|long|char|byte|short|boolean|String|new|synchronized|private|protected|abstract|extends|implements|interface|package|import|if|else|for|while|return|final|try|catch|finally|throw|throws|super|this|true|false|null)\b|\b\d+(?:\.\d+)?[fFL]?\b)/g;
 const H=c=>E(c).replace(K,m=>`<span class="${m[0]=='/'?'c':m[0]=='"'?'s':/\d/.test(m[0])?'n':'k'}">${m}</span>`);
 const E=t=>{const d=document.createElement('div');d.textContent=t;return d.innerHTML};
 $('#nav').innerHTML='<a href="#/"><b>⌂</b>Home</a>'+Object.keys(T).map(n=>`<a href="#/w/${n}"><b>${String(n).padStart(2,'0')}</b>Week ${n}</a>`).join('');
